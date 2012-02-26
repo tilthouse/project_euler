@@ -1,0 +1,12 @@
+#!/bin/bash
+
+pushd .
+cd /Users/boster/Documents/Development/project_euler
+printf -v num_str '%03d' $1
+echo "Creating problem $num_str"
+
+mkdir problems/$num_str
+
+echo "#!/usr/bin/env ruby" >> problems/$num_str/answer$num_str.rb
+
+popd
